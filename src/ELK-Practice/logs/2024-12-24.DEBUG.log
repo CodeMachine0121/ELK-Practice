@@ -1,0 +1,162 @@
+2024-12-24 10:40:57.032 +08:00 [INF] Information log
+2024-12-24 10:40:57.044 +08:00 [WRN] Warning log
+2024-12-24 10:40:57.044 +08:00 [ERR] Error log
+2024-12-24 10:40:57.044 +08:00 [FTL] Fatal log
+2024-12-24 10:40:57.333 +08:00 [INF] {AbstractConfigurationReader (ApmConfiguration)} The agent was started without a service name. The service name will be automatically discovered.
+2024-12-24 10:40:57.342 +08:00 [INF] {AbstractConfigurationReader (ApmConfiguration)} The agent was started without a service name. The automatically discovered service name is ELK-Practice
+2024-12-24 10:40:57.342 +08:00 [INF] {AbstractConfigurationReader (ApmConfiguration)} The agent was started without a service version. The service version will be automatically discovered.
+2024-12-24 10:40:57.342 +08:00 [INF] {AbstractConfigurationReader (ApmConfiguration)} The agent was started without a service version. The automatically discovered service version is 1.0.0+44bcc7d34f5a899a18f9b26ce78a3711a511d8ad
+2024-12-24 10:40:57.354 +08:00 [INF] No system wide logging configured, defaulting to fallback logger
+2024-12-24 10:40:57.356 +08:00 [INF] {ConfigurationStore} ********************************************************************************
+2024-12-24 10:40:57.356 +08:00 [INF] {ConfigurationStore} Elastic APM .NET Agent, version: 1.31.0+aa8e3ba9f7967edc621df38010dad1e7fbdad181
+2024-12-24 10:40:57.356 +08:00 [INF] {ConfigurationStore} Process ID: 18264
+2024-12-24 10:40:57.357 +08:00 [INF] {ConfigurationStore} Process Name: ELK-Practice
+2024-12-24 10:40:57.358 +08:00 [INF] {ConfigurationStore} Command line arguments: 'C:\Users\薛華慶James\workplace\ELK-Practice\src\ELK-Practice\ELK-Practice\bin\Debug\net8.0\ELK-Practice.dll'
+2024-12-24 10:40:57.358 +08:00 [INF] {ConfigurationStore} Operating System: Microsoft Windows 10.0.19045
+2024-12-24 10:40:57.358 +08:00 [INF] {ConfigurationStore} CPU architecture: "X64"
+2024-12-24 10:40:57.359 +08:00 [INF] {ConfigurationStore} Host: JAMESHSUEH-PC
+2024-12-24 10:40:57.360 +08:00 [INF] {ConfigurationStore} Time zone: (UTC+08:00) 台北
+2024-12-24 10:40:57.360 +08:00 [INF] {ConfigurationStore} Runtime: .NET 8.0.11
+2024-12-24 10:40:57.361 +08:00 [INF] {ConfigurationStore} ********************************************************************************
+2024-12-24 10:40:57.361 +08:00 [INF] {ConfigurationStore} Agent Configuration (via 'ApmConfiguration (config provider: ConfigurationKeyValueProvider environment provider: EnvironmentKeyValueProvider)'):
+2024-12-24 10:40:57.376 +08:00 [INF] {ConfigurationStore}       Default->log_level: 'Error' (GetDefaultValueForLogging)
+2024-12-24 10:40:57.377 +08:00 [INF] {ConfigurationStore}       Default->server_url: 'http://127.0.0.1:8200/' (GetDefaultValueForLogging)
+2024-12-24 10:40:57.377 +08:00 [INF] {ConfigurationStore}       Default->service_name: 'ELK-Practice' (GetDefaultValueForLogging)
+2024-12-24 10:40:57.377 +08:00 [INF] {ConfigurationStore}       Default->service_version: '1.0.0+44bcc7d34f5a899a18f9b26ce78a3711a511d8ad' (GetDefaultValueForLogging)
+2024-12-24 10:40:57.377 +08:00 [INF] {ConfigurationStore} ********************************************************************************
+2024-12-24 10:40:57.379 +08:00 [INF] {Service} Detected agent activation method: nuget
+2024-12-24 10:40:57.397 +08:00 [INF] CreateHttpClientHandler - Setting ServerCertificateCustomValidationCallback
+2024-12-24 10:40:57.397 +08:00 [INF] CreateHttpClientHandler - SslProtocols: "Tls12"
+2024-12-24 10:40:57.422 +08:00 [INF] CreateHttpClientHandler - Setting ServerCertificateCustomValidationCallback
+2024-12-24 10:40:57.422 +08:00 [INF] CreateHttpClientHandler - SslProtocols: "Tls12"
+2024-12-24 10:40:57.430 +08:00 [INF] {MetricsCollector} Collecting metrics in 30000 milliseconds interval
+2024-12-24 10:40:57.489 +08:00 [ERR] {CentralConfigurationFetcher} Exception was thrown while fetching configuration from APM Server and parsing it. ETag: `<null>'. URL: `http://127.0.0.1:8200/config/v1/agents?service.name=ELK-Practice&service.environment=Development'. Apm Server base URL: `http://127.0.0.1:8200/'. WaitInterval: 5m. dbgIterationsCount: 1.
++-> Request:
+    Method: GET, RequestUri: 'http://127.0.0.1:8200/config/v1/agents?service.name=ELK-Practice&service.environment=Development', Version: 1.1, Content: <null>, Headers:
+    {
+      User-Agent: apm-agent-dotnet/1.31.0+aa8e3ba9f7967edc621df38010dad1e7fbdad181
+      User-Agent: (ELK-Practice 1.0.0+44bcc7d34f5a899a18f9b26ce78a3711a511d8ad)
+      User-Agent: System.Net.Http/8.0.1124.51707
+      User-Agent: .NET_8/8.0.11
+      traceparent: 00-226a0c24a03bb748a3f49f86b069bade-7469c446a79d3aa0-00
+    }
++-> Response:
+    StatusCode: 503, ReasonPhrase: 'Service Unavailable', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+    {
+      Cache-Control: must-revalidate, max-age=300
+      X-Content-Type-Options: nosniff
+      Date: Tue, 24 Dec 2024 02:40:57 GMT
+      Content-Type: text/plain; charset=utf-8
+      Content-Length: 81
+    }
++-> Response body [length: 81]:
+    {"error":"Agent configuration infrastructure is not ready. Please retry later."}
+
+Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationFetcher+FailedToFetchConfigException: HTTP status code is Service Unavailable (503) which most likely means that APM Server supports the central configuration endpoint and Kibana connection is enabled, but Kibana connection is unavailable
+   at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationResponseParser.InterpretResponseStatusCode(HttpResponseMessage httpResponse, WaitInfoS waitInfo)
+   at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationResponseParser.ParseHttpResponse(HttpResponseMessage httpResponse, String httpResponseBody)
+   at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationFetcher.WorkLoopIteration()
+2024-12-24 10:40:57.499 +08:00 [INF] Now listening on: http://localhost:5237
+2024-12-24 10:40:57.502 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 10:40:57.502 +08:00 [INF] Hosting environment: Development
+2024-12-24 10:40:57.502 +08:00 [INF] Content root path: C:\Users\薛華慶James\workplace\ELK-Practice\src\ELK-Practice\ELK-Practice
+2024-12-24 10:40:57.553 +08:00 [INF] APM Server version ready - OpenTelemetry (Activity) bridge is active. Current Server version: 8.7.1
+2024-12-24 10:40:57.759 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5237/swagger/index.html - null null
+2024-12-24 10:40:57.894 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5237/swagger/index.html - 200 null text/html;charset=utf-8 134.8877ms
+2024-12-24 10:40:58.018 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5237/swagger/v1/swagger.json - null null
+2024-12-24 10:40:58.084 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5237/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 66.2519ms
+2024-12-24 10:41:07.045 +08:00 [INF] Information log
+2024-12-24 10:41:07.046 +08:00 [WRN] Warning log
+2024-12-24 10:41:07.046 +08:00 [ERR] Error log
+2024-12-24 10:41:07.046 +08:00 [FTL] Fatal log
+2024-12-24 10:41:11.038 +08:00 [INF] Application is shutting down...
+2024-12-24 13:06:27.783 +08:00 [INF] Information log
+2024-12-24 13:06:27.796 +08:00 [WRN] Warning log
+2024-12-24 13:06:27.796 +08:00 [ERR] Error log
+2024-12-24 13:06:27.796 +08:00 [FTL] Fatal log
+2024-12-24 13:06:28.129 +08:00 [INF] {AbstractConfigurationReader (ApmConfiguration)} The agent was started without a service name. The service name will be automatically discovered.
+2024-12-24 13:06:28.139 +08:00 [INF] {AbstractConfigurationReader (ApmConfiguration)} The agent was started without a service name. The automatically discovered service name is ELK-Practice
+2024-12-24 13:06:28.139 +08:00 [INF] {AbstractConfigurationReader (ApmConfiguration)} The agent was started without a service version. The service version will be automatically discovered.
+2024-12-24 13:06:28.139 +08:00 [INF] {AbstractConfigurationReader (ApmConfiguration)} The agent was started without a service version. The automatically discovered service version is 1.0.0+44bcc7d34f5a899a18f9b26ce78a3711a511d8ad
+2024-12-24 13:06:28.152 +08:00 [INF] No system wide logging configured, defaulting to fallback logger
+2024-12-24 13:06:28.155 +08:00 [INF] {ConfigurationStore} ********************************************************************************
+2024-12-24 13:06:28.155 +08:00 [INF] {ConfigurationStore} Elastic APM .NET Agent, version: 1.31.0+aa8e3ba9f7967edc621df38010dad1e7fbdad181
+2024-12-24 13:06:28.155 +08:00 [INF] {ConfigurationStore} Process ID: 9572
+2024-12-24 13:06:28.156 +08:00 [INF] {ConfigurationStore} Process Name: ELK-Practice
+2024-12-24 13:06:28.156 +08:00 [INF] {ConfigurationStore} Command line arguments: 'C:\Users\薛華慶James\workplace\ELK-Practice\src\ELK-Practice\ELK-Practice\bin\Debug\net8.0\ELK-Practice.dll'
+2024-12-24 13:06:28.156 +08:00 [INF] {ConfigurationStore} Operating System: Microsoft Windows 10.0.19045
+2024-12-24 13:06:28.157 +08:00 [INF] {ConfigurationStore} CPU architecture: "X64"
+2024-12-24 13:06:28.157 +08:00 [INF] {ConfigurationStore} Host: JAMESHSUEH-PC
+2024-12-24 13:06:28.158 +08:00 [INF] {ConfigurationStore} Time zone: (UTC+08:00) 台北
+2024-12-24 13:06:28.158 +08:00 [INF] {ConfigurationStore} Runtime: .NET 8.0.11
+2024-12-24 13:06:28.159 +08:00 [INF] {ConfigurationStore} ********************************************************************************
+2024-12-24 13:06:28.159 +08:00 [INF] {ConfigurationStore} Agent Configuration (via 'ApmConfiguration (config provider: ConfigurationKeyValueProvider environment provider: EnvironmentKeyValueProvider)'):
+2024-12-24 13:06:28.176 +08:00 [INF] {ConfigurationStore}       Default->log_level: 'Error' (GetDefaultValueForLogging)
+2024-12-24 13:06:28.176 +08:00 [INF] {ConfigurationStore}       Default->server_url: 'http://127.0.0.1:8200/' (GetDefaultValueForLogging)
+2024-12-24 13:06:28.176 +08:00 [INF] {ConfigurationStore}       Default->service_name: 'ELK-Practice' (GetDefaultValueForLogging)
+2024-12-24 13:06:28.176 +08:00 [INF] {ConfigurationStore}       Default->service_version: '1.0.0+44bcc7d34f5a899a18f9b26ce78a3711a511d8ad' (GetDefaultValueForLogging)
+2024-12-24 13:06:28.176 +08:00 [INF] {ConfigurationStore} ********************************************************************************
+2024-12-24 13:06:28.178 +08:00 [INF] {Service} Detected agent activation method: nuget
+2024-12-24 13:06:28.200 +08:00 [INF] CreateHttpClientHandler - Setting ServerCertificateCustomValidationCallback
+2024-12-24 13:06:28.200 +08:00 [INF] CreateHttpClientHandler - SslProtocols: "Tls12"
+2024-12-24 13:06:28.226 +08:00 [INF] CreateHttpClientHandler - Setting ServerCertificateCustomValidationCallback
+2024-12-24 13:06:28.226 +08:00 [INF] CreateHttpClientHandler - SslProtocols: "Tls12"
+2024-12-24 13:06:28.233 +08:00 [INF] {MetricsCollector} Collecting metrics in 30000 milliseconds interval
+2024-12-24 13:06:28.296 +08:00 [ERR] {CentralConfigurationFetcher} Exception was thrown while fetching configuration from APM Server and parsing it. ETag: `<null>'. URL: `http://127.0.0.1:8200/config/v1/agents?service.name=ELK-Practice&service.environment=Development'. Apm Server base URL: `http://127.0.0.1:8200/'. WaitInterval: 5m. dbgIterationsCount: 1.
++-> Request:
+    Method: GET, RequestUri: 'http://127.0.0.1:8200/config/v1/agents?service.name=ELK-Practice&service.environment=Development', Version: 1.1, Content: <null>, Headers:
+    {
+      User-Agent: apm-agent-dotnet/1.31.0+aa8e3ba9f7967edc621df38010dad1e7fbdad181
+      User-Agent: (ELK-Practice 1.0.0+44bcc7d34f5a899a18f9b26ce78a3711a511d8ad)
+      User-Agent: System.Net.Http/8.0.1124.51707
+      User-Agent: .NET_8/8.0.11
+      traceparent: 00-11c16390392738c2b089f1892c615342-6182eaade07cf111-00
+    }
++-> Response:
+    StatusCode: 503, ReasonPhrase: 'Service Unavailable', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+    {
+      Cache-Control: must-revalidate, max-age=300
+      X-Content-Type-Options: nosniff
+      Date: Tue, 24 Dec 2024 05:06:28 GMT
+      Content-Type: text/plain; charset=utf-8
+      Content-Length: 81
+    }
++-> Response body [length: 81]:
+    {"error":"Agent configuration infrastructure is not ready. Please retry later."}
+
+Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationFetcher+FailedToFetchConfigException: HTTP status code is Service Unavailable (503) which most likely means that APM Server supports the central configuration endpoint and Kibana connection is enabled, but Kibana connection is unavailable
+   at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationResponseParser.InterpretResponseStatusCode(HttpResponseMessage httpResponse, WaitInfoS waitInfo)
+   at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationResponseParser.ParseHttpResponse(HttpResponseMessage httpResponse, String httpResponseBody)
+   at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationFetcher.WorkLoopIteration()
+2024-12-24 13:06:28.304 +08:00 [INF] Now listening on: http://localhost:5237
+2024-12-24 13:06:28.306 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-24 13:06:28.307 +08:00 [INF] Hosting environment: Development
+2024-12-24 13:06:28.307 +08:00 [INF] Content root path: C:\Users\薛華慶James\workplace\ELK-Practice\src\ELK-Practice\ELK-Practice
+2024-12-24 13:06:28.363 +08:00 [INF] APM Server version ready - OpenTelemetry (Activity) bridge is active. Current Server version: 8.7.1
+2024-12-24 13:06:30.156 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5237/swagger/index.html - null null
+2024-12-24 13:06:30.344 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5237/swagger/index.html - 200 null text/html;charset=utf-8 188.6198ms
+2024-12-24 13:06:30.505 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5237/swagger/v1/swagger.json - null null
+2024-12-24 13:06:30.572 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5237/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 67.612ms
+2024-12-24 13:06:37.791 +08:00 [INF] Information log
+2024-12-24 13:06:37.792 +08:00 [WRN] Warning log
+2024-12-24 13:06:37.792 +08:00 [ERR] Error log
+2024-12-24 13:06:37.792 +08:00 [FTL] Fatal log
+2024-12-24 13:06:47.794 +08:00 [INF] Information log
+2024-12-24 13:06:47.794 +08:00 [WRN] Warning log
+2024-12-24 13:06:47.794 +08:00 [ERR] Error log
+2024-12-24 13:06:47.794 +08:00 [FTL] Fatal log
+2024-12-24 13:06:57.793 +08:00 [INF] Information log
+2024-12-24 13:06:57.793 +08:00 [WRN] Warning log
+2024-12-24 13:06:57.793 +08:00 [ERR] Error log
+2024-12-24 13:06:57.793 +08:00 [FTL] Fatal log
+2024-12-24 13:07:07.795 +08:00 [INF] Information log
+2024-12-24 13:07:07.795 +08:00 [WRN] Warning log
+2024-12-24 13:07:07.795 +08:00 [ERR] Error log
+2024-12-24 13:07:07.795 +08:00 [FTL] Fatal log
+2024-12-24 13:07:07.853 +08:00 [INF] Application is shutting down...
+2024-12-24 13:07:07.926 +08:00 [WRN] {PayloadSenderV2} Cancellation requested. Following events were not transferred successfully to the server ("http://127.0.0.1:8200/"):
+    Elastic.Apm.Metrics.MetricSet,
+    Elastic.Apm.Metrics.MetricSet,
+    Elastic.Apm.Metrics.MetricSet,
+    Elastic.Apm.Metrics.MetricSet,
+    Elastic.Apm.Metrics.MetricSet

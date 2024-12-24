@@ -9,7 +9,7 @@ public class TestController: ControllerBase
     [HttpGet]
     public string HelloWorld()
     {
-        Log.Information("Hi This is James");
+        Log.Debug("Hi This is James debug");
         
         return "Hello world";
     }

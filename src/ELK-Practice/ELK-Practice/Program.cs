@@ -1,8 +1,6 @@
 using Elastic.Apm.DiagnosticSource;
-using Elastic.Apm.SerilogEnricher;
 using Serilog;
-using Serilog.Sinks.Elasticsearch;
-using ILogger = Microsoft.Extensions.Logging.ILogger;
+using Serilog.Events;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,14 +11,30 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
 builder.Services.AddElasticApm(new HttpDiagnosticsSubscriber());
-Log.Logger = new LoggerConfiguration()
-        .Enrich.WithElasticApmCorrelationInfo()
-        .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri("http://localhost:9200"))
-        {
-            AutoRegisterTemplate = true, IndexFormat = "apm-logs-{0:yyyy.MM.dd}"
-        })
-        .CreateLogger();
+var logger = new LoggerConfiguration()
+    .WriteTo.File(
+        $"../logs/{DateTime.Now:yyyy-MM-dd}.DEBUG.log",
+        LogEventLevel.Debug)
+    .WriteTo.File(
+        $"../logs/{DateTime.Now:yyyy-MM-dd}.Error.log", // 用於 Error 級別的檔案
+        LogEventLevel.Error)
+    .CreateLogger();
+
+Log.Logger = logger;
 builder.Host.UseSerilog();
+
+var timer = new Timer(e =>
+{
+    Log.Information("Information log");
+    Log.Warning("Warning log");
+    Log.Error("Error log");
+    Log.Fatal("Fatal log");
+    Log.Debug("Debug log");
+    Log.Verbose("Verbose log");
+    Console.WriteLine("write log");
+
+}, null, TimeSpan.Zero, TimeSpan.FromSeconds(10));
+
 
 var app = builder.Build();
 

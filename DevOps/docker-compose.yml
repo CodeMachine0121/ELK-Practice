@@ -18,15 +18,19 @@ services:
     networks:
       - elk
 
-  logstash:
-    image: docker.elastic.co/logstash/logstash:8.7.1
-    container_name: logstash
+  fluentd:
+    image: fluent/fluentd:v1.14-1
+    container_name: fluentd
     environment:
-      - LS_JAVA_OPTS=-Xmx256m -Xms256m
-      - ELASTICSEARCH_HOST=elasticsearch:9200
+      - FLUENT_ELASTICSEARCH_HOST=elasticsearch
+      - FLUENT_ELASTICSEARCH_PORT=9200
+      - FLUENT_ELASTICSEARCH_USER=james  # Provide Elasticsearch username
+      - FLUENT_ELASTICSEARCH_PASSWORD=1234qwer  # Provide Elasticsearch password
     volumes:
-      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
-      - ./logstash/pipeline:/usr/share/logstash/pipeline
+      - ./fluentd/conf/fluentd.conf:/fluentd/etc/fluentd.conf  # Fluentd 配置文件
+      - ../src/ELK-Practice/logs:/var/logs/fluentd
+    ports:
+      - "24224:24224"  # Fluentd 用于接收日志的端口
     depends_on:
       - elasticsearch
     networks:

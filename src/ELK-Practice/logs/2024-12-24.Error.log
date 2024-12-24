@@ -1,0 +1,66 @@
+2024-12-24 10:40:57.044 +08:00 [ERR] Error log
+2024-12-24 10:40:57.044 +08:00 [FTL] Fatal log
+2024-12-24 10:40:57.489 +08:00 [ERR] {CentralConfigurationFetcher} Exception was thrown while fetching configuration from APM Server and parsing it. ETag: `<null>'. URL: `http://127.0.0.1:8200/config/v1/agents?service.name=ELK-Practice&service.environment=Development'. Apm Server base URL: `http://127.0.0.1:8200/'. WaitInterval: 5m. dbgIterationsCount: 1.
++-> Request:
+    Method: GET, RequestUri: 'http://127.0.0.1:8200/config/v1/agents?service.name=ELK-Practice&service.environment=Development', Version: 1.1, Content: <null>, Headers:
+    {
+      User-Agent: apm-agent-dotnet/1.31.0+aa8e3ba9f7967edc621df38010dad1e7fbdad181
+      User-Agent: (ELK-Practice 1.0.0+44bcc7d34f5a899a18f9b26ce78a3711a511d8ad)
+      User-Agent: System.Net.Http/8.0.1124.51707
+      User-Agent: .NET_8/8.0.11
+      traceparent: 00-226a0c24a03bb748a3f49f86b069bade-7469c446a79d3aa0-00
+    }
++-> Response:
+    StatusCode: 503, ReasonPhrase: 'Service Unavailable', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+    {
+      Cache-Control: must-revalidate, max-age=300
+      X-Content-Type-Options: nosniff
+      Date: Tue, 24 Dec 2024 02:40:57 GMT
+      Content-Type: text/plain; charset=utf-8
+      Content-Length: 81
+    }
++-> Response body [length: 81]:
+    {"error":"Agent configuration infrastructure is not ready. Please retry later."}
+
+Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationFetcher+FailedToFetchConfigException: HTTP status code is Service Unavailable (503) which most likely means that APM Server supports the central configuration endpoint and Kibana connection is enabled, but Kibana connection is unavailable
+   at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationResponseParser.InterpretResponseStatusCode(HttpResponseMessage httpResponse, WaitInfoS waitInfo)
+   at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationResponseParser.ParseHttpResponse(HttpResponseMessage httpResponse, String httpResponseBody)
+   at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationFetcher.WorkLoopIteration()
+2024-12-24 10:41:07.046 +08:00 [ERR] Error log
+2024-12-24 10:41:07.046 +08:00 [FTL] Fatal log
+2024-12-24 13:06:27.796 +08:00 [ERR] Error log
+2024-12-24 13:06:27.796 +08:00 [FTL] Fatal log
+2024-12-24 13:06:28.296 +08:00 [ERR] {CentralConfigurationFetcher} Exception was thrown while fetching configuration from APM Server and parsing it. ETag: `<null>'. URL: `http://127.0.0.1:8200/config/v1/agents?service.name=ELK-Practice&service.environment=Development'. Apm Server base URL: `http://127.0.0.1:8200/'. WaitInterval: 5m. dbgIterationsCount: 1.
++-> Request:
+    Method: GET, RequestUri: 'http://127.0.0.1:8200/config/v1/agents?service.name=ELK-Practice&service.environment=Development', Version: 1.1, Content: <null>, Headers:
+    {
+      User-Agent: apm-agent-dotnet/1.31.0+aa8e3ba9f7967edc621df38010dad1e7fbdad181
+      User-Agent: (ELK-Practice 1.0.0+44bcc7d34f5a899a18f9b26ce78a3711a511d8ad)
+      User-Agent: System.Net.Http/8.0.1124.51707
+      User-Agent: .NET_8/8.0.11
+      traceparent: 00-11c16390392738c2b089f1892c615342-6182eaade07cf111-00
+    }
++-> Response:
+    StatusCode: 503, ReasonPhrase: 'Service Unavailable', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
+    {
+      Cache-Control: must-revalidate, max-age=300
+      X-Content-Type-Options: nosniff
+      Date: Tue, 24 Dec 2024 05:06:28 GMT
+      Content-Type: text/plain; charset=utf-8
+      Content-Length: 81
+    }
++-> Response body [length: 81]:
+    {"error":"Agent configuration infrastructure is not ready. Please retry later."}
+
+Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationFetcher+FailedToFetchConfigException: HTTP status code is Service Unavailable (503) which most likely means that APM Server supports the central configuration endpoint and Kibana connection is enabled, but Kibana connection is unavailable
+   at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationResponseParser.InterpretResponseStatusCode(HttpResponseMessage httpResponse, WaitInfoS waitInfo)
+   at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationResponseParser.ParseHttpResponse(HttpResponseMessage httpResponse, String httpResponseBody)
+   at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationFetcher.WorkLoopIteration()
+2024-12-24 13:06:37.792 +08:00 [ERR] Error log
+2024-12-24 13:06:37.792 +08:00 [FTL] Fatal log
+2024-12-24 13:06:47.794 +08:00 [ERR] Error log
+2024-12-24 13:06:47.794 +08:00 [FTL] Fatal log
+2024-12-24 13:06:57.793 +08:00 [ERR] Error log
+2024-12-24 13:06:57.793 +08:00 [FTL] Fatal log
+2024-12-24 13:07:07.795 +08:00 [ERR] Error log
+2024-12-24 13:07:07.795 +08:00 [FTL] Fatal log
