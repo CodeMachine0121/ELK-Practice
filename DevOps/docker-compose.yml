@@ -28,7 +28,7 @@ services:
       - FLUENT_ELASTICSEARCH_PASSWORD=1234qwer  # Provide Elasticsearch password
     volumes:
       - ./fluentd/conf/fluentd.conf:/fluentd/etc/fluentd.conf  # Fluentd 配置文件
-      - ../src/ELK-Practice/logs:/var/logs/fluentd
+      - ../src/ELK-Practice/logs:/fluentd/log
     ports:
       - "24224:24224"  # Fluentd 用于接收日志的端口
     depends_on:

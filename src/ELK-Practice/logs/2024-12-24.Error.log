@@ -1,6 +1,6 @@
-2024-12-24 10:40:57.044 +08:00 [ERR] Error log
-2024-12-24 10:40:57.044 +08:00 [FTL] Fatal log
-2024-12-24 10:40:57.489 +08:00 [ERR] {CentralConfigurationFetcher} Exception was thrown while fetching configuration from APM Server and parsing it. ETag: `<null>'. URL: `http://127.0.0.1:8200/config/v1/agents?service.name=ELK-Practice&service.environment=Development'. Apm Server base URL: `http://127.0.0.1:8200/'. WaitInterval: 5m. dbgIterationsCount: 1.
+2024-12-24 13:30:31.022 +08:00 [ERR] Error log
+2024-12-24 13:30:31.022 +08:00 [FTL] Fatal log
+2024-12-24 13:30:31.508 +08:00 [ERR] {CentralConfigurationFetcher} Exception was thrown while fetching configuration from APM Server and parsing it. ETag: `<null>'. URL: `http://127.0.0.1:8200/config/v1/agents?service.name=ELK-Practice&service.environment=Development'. Apm Server base URL: `http://127.0.0.1:8200/'. WaitInterval: 5m. dbgIterationsCount: 1.
 +-> Request:
     Method: GET, RequestUri: 'http://127.0.0.1:8200/config/v1/agents?service.name=ELK-Practice&service.environment=Development', Version: 1.1, Content: <null>, Headers:
     {
@@ -8,14 +8,14 @@
       User-Agent: (ELK-Practice 1.0.0+44bcc7d34f5a899a18f9b26ce78a3711a511d8ad)
       User-Agent: System.Net.Http/8.0.1124.51707
       User-Agent: .NET_8/8.0.11
-      traceparent: 00-226a0c24a03bb748a3f49f86b069bade-7469c446a79d3aa0-00
+      traceparent: 00-d1fcf6c286ecbcdcd3800742e5be2425-dcd2fa4d90eba648-00
     }
 +-> Response:
     StatusCode: 503, ReasonPhrase: 'Service Unavailable', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
     {
       Cache-Control: must-revalidate, max-age=300
       X-Content-Type-Options: nosniff
-      Date: Tue, 24 Dec 2024 02:40:57 GMT
+      Date: Tue, 24 Dec 2024 05:30:31 GMT
       Content-Type: text/plain; charset=utf-8
       Content-Length: 81
     }
@@ -26,11 +26,11 @@ Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationFetcher+FailedToFetchC
    at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationResponseParser.InterpretResponseStatusCode(HttpResponseMessage httpResponse, WaitInfoS waitInfo)
    at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationResponseParser.ParseHttpResponse(HttpResponseMessage httpResponse, String httpResponseBody)
    at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationFetcher.WorkLoopIteration()
-2024-12-24 10:41:07.046 +08:00 [ERR] Error log
-2024-12-24 10:41:07.046 +08:00 [FTL] Fatal log
-2024-12-24 13:06:27.796 +08:00 [ERR] Error log
-2024-12-24 13:06:27.796 +08:00 [FTL] Fatal log
-2024-12-24 13:06:28.296 +08:00 [ERR] {CentralConfigurationFetcher} Exception was thrown while fetching configuration from APM Server and parsing it. ETag: `<null>'. URL: `http://127.0.0.1:8200/config/v1/agents?service.name=ELK-Practice&service.environment=Development'. Apm Server base URL: `http://127.0.0.1:8200/'. WaitInterval: 5m. dbgIterationsCount: 1.
+2024-12-24 13:30:41.021 +08:00 [ERR] Error log
+2024-12-24 13:30:41.021 +08:00 [FTL] Fatal log
+2024-12-24 13:32:00.640 +08:00 [ERR] Error log
+2024-12-24 13:32:00.640 +08:00 [FTL] Fatal log
+2024-12-24 13:32:01.092 +08:00 [ERR] {CentralConfigurationFetcher} Exception was thrown while fetching configuration from APM Server and parsing it. ETag: `<null>'. URL: `http://127.0.0.1:8200/config/v1/agents?service.name=ELK-Practice&service.environment=Development'. Apm Server base URL: `http://127.0.0.1:8200/'. WaitInterval: 5m. dbgIterationsCount: 1.
 +-> Request:
     Method: GET, RequestUri: 'http://127.0.0.1:8200/config/v1/agents?service.name=ELK-Practice&service.environment=Development', Version: 1.1, Content: <null>, Headers:
     {
@@ -38,14 +38,14 @@ Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationFetcher+FailedToFetchC
       User-Agent: (ELK-Practice 1.0.0+44bcc7d34f5a899a18f9b26ce78a3711a511d8ad)
       User-Agent: System.Net.Http/8.0.1124.51707
       User-Agent: .NET_8/8.0.11
-      traceparent: 00-11c16390392738c2b089f1892c615342-6182eaade07cf111-00
+      traceparent: 00-3a8e2ca1314db390283159ca507a0abf-b5afcbb6a90c671b-00
     }
 +-> Response:
     StatusCode: 503, ReasonPhrase: 'Service Unavailable', Version: 1.1, Content: System.Net.Http.HttpConnectionResponseContent, Headers:
     {
       Cache-Control: must-revalidate, max-age=300
       X-Content-Type-Options: nosniff
-      Date: Tue, 24 Dec 2024 05:06:28 GMT
+      Date: Tue, 24 Dec 2024 05:32:01 GMT
       Content-Type: text/plain; charset=utf-8
       Content-Length: 81
     }
@@ -56,11 +56,53 @@ Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationFetcher+FailedToFetchC
    at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationResponseParser.InterpretResponseStatusCode(HttpResponseMessage httpResponse, WaitInfoS waitInfo)
    at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationResponseParser.ParseHttpResponse(HttpResponseMessage httpResponse, String httpResponseBody)
    at Elastic.Apm.BackendComm.CentralConfig.CentralConfigurationFetcher.WorkLoopIteration()
-2024-12-24 13:06:37.792 +08:00 [ERR] Error log
-2024-12-24 13:06:37.792 +08:00 [FTL] Fatal log
-2024-12-24 13:06:47.794 +08:00 [ERR] Error log
-2024-12-24 13:06:47.794 +08:00 [FTL] Fatal log
-2024-12-24 13:06:57.793 +08:00 [ERR] Error log
-2024-12-24 13:06:57.793 +08:00 [FTL] Fatal log
-2024-12-24 13:07:07.795 +08:00 [ERR] Error log
-2024-12-24 13:07:07.795 +08:00 [FTL] Fatal log
+2024-12-24 13:32:10.637 +08:00 [ERR] Error log
+2024-12-24 13:32:10.637 +08:00 [FTL] Fatal log
+2024-12-24 13:32:20.628 +08:00 [ERR] Error log
+2024-12-24 13:32:20.628 +08:00 [FTL] Fatal log
+2024-12-24 13:32:30.632 +08:00 [ERR] Error log
+2024-12-24 13:32:30.632 +08:00 [FTL] Fatal log
+2024-12-24 13:32:40.627 +08:00 [ERR] Error log
+2024-12-24 13:32:40.627 +08:00 [FTL] Fatal log
+2024-12-24 13:32:50.636 +08:00 [ERR] Error log
+2024-12-24 13:32:50.636 +08:00 [FTL] Fatal log
+2024-12-24 13:33:00.627 +08:00 [ERR] Error log
+2024-12-24 13:33:00.627 +08:00 [FTL] Fatal log
+2024-12-24 13:33:10.627 +08:00 [ERR] Error log
+2024-12-24 13:33:10.627 +08:00 [FTL] Fatal log
+2024-12-24 13:33:20.627 +08:00 [ERR] Error log
+2024-12-24 13:33:20.627 +08:00 [FTL] Fatal log
+2024-12-24 13:33:30.627 +08:00 [ERR] Error log
+2024-12-24 13:33:30.627 +08:00 [FTL] Fatal log
+2024-12-24 13:33:40.635 +08:00 [ERR] Error log
+2024-12-24 13:33:40.635 +08:00 [FTL] Fatal log
+2024-12-24 13:33:50.633 +08:00 [ERR] Error log
+2024-12-24 13:33:50.633 +08:00 [FTL] Fatal log
+2024-12-24 13:34:00.636 +08:00 [ERR] Error log
+2024-12-24 13:34:00.636 +08:00 [FTL] Fatal log
+2024-12-24 13:34:10.637 +08:00 [ERR] Error log
+2024-12-24 13:34:10.637 +08:00 [FTL] Fatal log
+2024-12-24 13:34:20.631 +08:00 [ERR] Error log
+2024-12-24 13:34:20.631 +08:00 [FTL] Fatal log
+2024-12-24 13:34:30.639 +08:00 [ERR] Error log
+2024-12-24 13:34:30.639 +08:00 [FTL] Fatal log
+2024-12-24 13:34:40.634 +08:00 [ERR] Error log
+2024-12-24 13:34:40.634 +08:00 [FTL] Fatal log
+2024-12-24 13:34:50.640 +08:00 [ERR] Error log
+2024-12-24 13:34:50.640 +08:00 [FTL] Fatal log
+2024-12-24 13:35:00.627 +08:00 [ERR] Error log
+2024-12-24 13:35:00.627 +08:00 [FTL] Fatal log
+2024-12-24 13:35:10.627 +08:00 [ERR] Error log
+2024-12-24 13:35:10.627 +08:00 [FTL] Fatal log
+2024-12-24 13:35:20.629 +08:00 [ERR] Error log
+2024-12-24 13:35:20.629 +08:00 [FTL] Fatal log
+2024-12-24 13:35:30.638 +08:00 [ERR] Error log
+2024-12-24 13:35:30.638 +08:00 [FTL] Fatal log
+2024-12-24 13:35:41.334 +08:00 [ERR] Error log
+2024-12-24 13:35:41.334 +08:00 [FTL] Fatal log
+2024-12-24 13:35:50.636 +08:00 [ERR] Error log
+2024-12-24 13:35:50.636 +08:00 [FTL] Fatal log
+2024-12-24 13:36:00.630 +08:00 [ERR] Error log
+2024-12-24 13:36:00.630 +08:00 [FTL] Fatal log
+2024-12-24 13:36:10.626 +08:00 [ERR] Error log
+2024-12-24 13:36:10.626 +08:00 [FTL] Fatal log
