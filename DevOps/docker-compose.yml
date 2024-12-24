@@ -19,18 +19,20 @@ services:
       - elk
 
   fluentd:
-    image: fluent/fluentd:v1.14-1
+    image: fluent/fluentd-kubernetes-daemonset:v1.14.6-debian-elasticsearch7-1.1
     container_name: fluentd
     environment:
       - FLUENT_ELASTICSEARCH_HOST=elasticsearch
       - FLUENT_ELASTICSEARCH_PORT=9200
-      - FLUENT_ELASTICSEARCH_USER=james  # Provide Elasticsearch username
-      - FLUENT_ELASTICSEARCH_PASSWORD=1234qwer  # Provide Elasticsearch password
+      - FLUENT_ELASTICSEARCH_USER=elastic  
+      - FLUENT_ELASTICSEARCH_PASSWORD=1234qwer  
     volumes:
-      - ./fluentd/conf/fluentd.conf:/fluentd/etc/fluentd.conf  # Fluentd 配置文件
-      - ../src/ELK-Practice/logs:/fluentd/log
+      - ./fluentd/conf:/fluentd/etc
+      - ./logs:/fluentd/log
+      - ./logs:/var/fluentd/log/
     ports:
-      - "24224:24224"  # Fluentd 用于接收日志的端口
+      - "24224:24224"  
+      - "24224:24224/udp"
     depends_on:
       - elasticsearch
     networks:
